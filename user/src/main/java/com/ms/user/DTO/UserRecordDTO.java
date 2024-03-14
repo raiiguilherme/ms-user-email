@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public record UserRecordDTO( //UTILIZANDO RECORD PARA PROTEGER AS REGRAS DE NEGOCIO
         @NotBlank   //VALIDANDO PARA QUE NAO VENHA VAZIO
-        String nome,
+        String name,
         @NotBlank @Email //VALIDANDO A FORMATAÇÃO DE EMAIL E PARA QUE NAO VENHA VAZIO
         String email
 ) {
