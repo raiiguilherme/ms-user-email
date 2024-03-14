@@ -27,7 +27,7 @@ public class UserController {
     var userModel = new UserModel();
         BeanUtils.copyProperties(userDTO, userModel); //COPIA AS PROPRIEDADES
 
-        service.criarUser(userModel);
+        service.criarUser(userModel); //usando o metodo criado na classe UserService para salvar
 
     return ResponseEntity.status(HttpStatus.CREATED).body(userModel);
 

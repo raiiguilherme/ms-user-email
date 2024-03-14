@@ -17,11 +17,11 @@ public class UserProducer { //AQUI EU CRIO A MENSAGEM QUE SERA ESCUTADA PELO MS 
     private String routingkey;
 
     public void pushMessageEmail(UserModel userModel){
-        var emailDTO = new EmailDTO();
+        var emailDTO = new EmailDTO(); //CONSTRUINDO O EMAIL
         emailDTO.setUserId(userModel.getId());
         emailDTO.setEmailTo(userModel.getEmail());
         emailDTO.setSubject("cadastro realizado com sucesso!");
-        emailDTO.setText(userModel.getName()+"Aproveite");
+        emailDTO.setText("Acabamos de receber o seu cadastro em nossa plataforma. Aproveite!");
 
 
         //COMO SERA UTILIZADO EXCHANGE DEFAULT, BASTA ADICIONAR UMA STRING VAZIA
