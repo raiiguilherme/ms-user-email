@@ -6,16 +6,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 @Entity
 @Table(name = "tb_user")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserModel {
+public class UserModel implements  Serializable{
+        //atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
     private String name;
+    private  String email;
 }
